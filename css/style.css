@@ -1,0 +1,220 @@
+body, h1, h2, h3, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1a1a1a;
+    color: #fff;
+    line-height: 1.6;
+}
+
+.card {
+    padding: 30px;
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: #333;
+    border: 1px solid #B362FF;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+header {
+    background-color: #333;
+    padding: 20px;
+    text-align: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+header button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+}
+
+header button:hover {
+    color: #B362FF;
+}
+
+.card-header {
+    text-align: center;
+    padding: 20px;
+}
+
+.card-header h1 {
+    font-size: 2em;
+}
+
+.card-header p {
+    font-size: 1.2em;
+}
+
+.about-me, .projects, .achievements, .skills, .contact, footer {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+h2 {
+    text-align: center;
+    border-bottom: 2px solid #B362FF;
+    padding-top: 25px;
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.about-me p {
+    margin: 20px;
+}
+
+.projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+}
+
+.projects .project-card {
+    background-color: #333;
+    border: 1px solid #B362FF;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 20px;
+    overflow: hidden;
+}
+
+.projects .project-card h3 {
+    color: #B362FF;
+    margin-bottom: 15px;
+}
+
+.projects .project-card .project-image img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.projects .project-card:hover {
+    transition: 0.3s ease-in-out;
+    transform: scale(1.05);
+
+}
+
+.projects .project-card .project-details p {
+    margin-bottom: 10px;
+}
+
+.achievements ul {
+    list-style: none;
+}
+
+.skills h2, .achievements h2 {
+    text-align: center;
+}
+
+.skills .skills-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 20px;
+}
+
+.skills .skills-list li {
+    display: flex;
+    align-items: center;
+}
+
+.skills-list li img,
+.projects .project-details img {
+    width: 32px; 
+    height: 32px; 
+    margin-right: 10px;
+}
+
+.contact-list img {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    margin-left: 20px;
+    margin-bottom: -10px;
+}
+
+.contact-list a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+    margin-right: 15px;
+}
+
+.contact-list {
+    list-style: none;
+
+    display: flex;
+    justify-content: center;
+}
+
+.contact-list a:hover {
+    color: #B362FF;
+}
+
+
+.contact {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 60px; 
+}
+
+.cv-button {
+    margin-top: 20px;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #B362FF;
+    text-decoration: none;
+    color: #fff;
+    border-radius: 5px;
+}
+
+.cv-button:hover {
+    background: #7048E8;
+    color: #fff;
+}
+
+
+footer {
+    background-color: #333;
+    padding-bottom: 0px;
+    text-align: center;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease-out forwards;
+}
+
+
+@media screen and (max-width: 600px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    header p {
+        font-size: 1em;
+    }
+
+    .about-me, .projects, .achievements, .skills, .contact, footer {
+        margin: 20px auto;
+    }
+
+    .skills .skills-list li {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
